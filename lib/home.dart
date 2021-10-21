@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jpi_001/board_notice.dart';
 import 'package:jpi_001/institute_notice.dart';
-import 'package:jpi_001/news.dart';
 import 'package:jpi_001/result.dart';
 
 class Home extends StatelessWidget {
@@ -22,11 +21,18 @@ class Home extends StatelessWidget {
                   child: Text('Admin Login')
                 ),
               ],
-            )
+            ),
           ],
         ),
         body: Container(
-          color: Colors.grey,
+          //color: Colors.grey,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/bg1.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +50,7 @@ class Home extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           primary: Colors.blueGrey
                         ), 
-                        child: const Text('Institute Notice'),
+                        child: const Text('News Feed'),
                         onPressed: (){
                           Navigator.push(
                             context, 
@@ -62,12 +68,11 @@ class Home extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           primary: Colors.blueGrey
                         ),
-                        onPressed: (){
-                          Navigator.push(
+                        onPressed: (){Navigator.push(
                             context, 
-                            MaterialPageRoute(builder: (context) => const board_notice()));
+                            MaterialPageRoute(builder: (context) => const result()));
                         }, 
-                        child: const Text('Board Notice'),
+                        child: const Text('Result'),
                       ),
                     ),
                   ),
@@ -87,11 +92,12 @@ class Home extends StatelessWidget {
                           primary: Colors.blueGrey
                         ),
                         onPressed: (){
+
                           Navigator.push(
                             context, 
-                            MaterialPageRoute(builder: (context) => const result()));
+                            MaterialPageRoute(builder: (context) => const board_notice()));
                         }, 
-                        child: const Text('Result'),
+                        child: const Text('Board Notice'),
                       ),
                     ),
                   ),
@@ -104,12 +110,8 @@ class Home extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           primary: Colors.blueGrey
                         ),
-                        onPressed: (){
-                          Navigator.push(
-                            context, 
-                            MaterialPageRoute(builder: (context) => const news()));
-                        }, 
-                        child: const Text('News'),
+                        onPressed: (){}, 
+                        child: const Text('Class Routine'),
                       ),
                     ),
                   ),
@@ -129,7 +131,42 @@ class Home extends StatelessWidget {
                           primary: Colors.blueGrey
                         ),
                         onPressed: (){}, 
-                        child: const Text('JPI Contact Info'),
+                        child: const Text('Book List'),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: SizedBox(
+                      height: 120,
+                      width: 120,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.blueGrey
+                        ),
+                        onPressed: (){}, 
+                        child: const Text('Exam'),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: SizedBox(
+                      height: 120,
+                      width: 120,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.blueGrey
+                        ),
+                        onPressed: (){}, 
+                        child: const Text('Contact JPI'),
                       ),
                     ),
                   ),
