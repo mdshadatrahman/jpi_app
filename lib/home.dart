@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.grey[800],
           actions: [
             PopupMenuButton(
-              itemBuilder: (context) => [
+              itemBuilder: (BuildContext context) =>[
                 const PopupMenuItem(
                   child: Text('Admin Login')
                 ),
@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
           //color: Colors.grey,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/bg1.jpg"),
+              image: AssetImage('assets/images/bg1.jpg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -48,7 +48,8 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0.6),
+                          
                         ), 
                         child: const Text('News Feed'),
                         onPressed: (){
@@ -66,7 +67,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0),
                         ),
                         onPressed: (){Navigator.push(
                             context, 
@@ -89,13 +90,13 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0),
                         ),
                         onPressed: (){
 
                           Navigator.push(
                             context, 
-                            MaterialPageRoute(builder: (context) => const board_notice()));
+                            MaterialPageRoute(builder: (context) =>  board_notice()));
                         }, 
                         child: const Text('Board Notice'),
                       ),
@@ -108,7 +109,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0),
                         ),
                         onPressed: (){}, 
                         child: const Text('Class Routine'),
@@ -128,7 +129,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0),
                         ),
                         onPressed: (){}, 
                         child: const Text('Book List'),
@@ -142,7 +143,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0),
                         ),
                         onPressed: (){}, 
                         child: const Text('Exam'),
@@ -163,7 +164,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0),
                         ),
                         onPressed: (){}, 
                         child: const Text('Contact JPI'),
@@ -177,7 +178,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey
+                          primary: Colors.blueGrey.withOpacity(0),
                         ),
                         onPressed: (){}, 
                         child: const Text('About'),
