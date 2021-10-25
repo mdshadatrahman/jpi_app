@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jpi_001/board_notice.dart';
+import 'package:jpi_001/classroutine.dart';
 import 'package:jpi_001/institute_notice.dart';
 import 'package:jpi_001/result.dart';
 
@@ -67,7 +68,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0),
+                          primary: Colors.blueGrey.withOpacity(0.6),
                         ),
                         onPressed: (){Navigator.push(
                             context, 
@@ -90,7 +91,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0),
+                          primary: Colors.blueGrey.withOpacity(0.6),
                         ),
                         onPressed: (){
 
@@ -109,10 +110,14 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0),
+                          primary: Colors.blueGrey.withOpacity(0.6),
                         ),
-                        onPressed: (){}, 
-                        child: const Text('Class Routine'),
+                        onPressed: (){
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) =>  classroutine()));
+                        }, 
+                        child: const Text('Class Routine\n\n      (CMT)'),
                       ),
                     ),
                   ),
@@ -129,7 +134,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0),
+                          primary: Colors.blueGrey.withOpacity(0.6),
                         ),
                         onPressed: (){}, 
                         child: const Text('Book List'),
@@ -143,7 +148,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0),
+                          primary: Colors.blueGrey.withOpacity(0.6),
                         ),
                         onPressed: (){}, 
                         child: const Text('Exam'),
@@ -164,7 +169,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0),
+                          primary: Colors.blueGrey.withOpacity(0.6),
                         ),
                         onPressed: (){}, 
                         child: const Text('Contact JPI'),
@@ -178,7 +183,7 @@ class Home extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0),
+                          primary: Colors.blueGrey.withOpacity(0.6),
                         ),
                         onPressed: (){}, 
                         child: const Text('About'),
