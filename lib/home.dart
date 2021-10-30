@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:jpi_001/about.dart';
 import 'package:jpi_001/board_notice.dart';
 import 'package:jpi_001/classroutine.dart';
+import 'package:jpi_001/contact_jpi.dart';
 import 'package:jpi_001/institute_notice.dart';
+import 'package:jpi_001/jpi_control_room.dart';
+import 'package:jpi_001/jpi_facebook.dart';
 import 'package:jpi_001/result.dart';
 
 class Home extends StatelessWidget {
@@ -15,15 +20,6 @@ class Home extends StatelessWidget {
           title: const Text('Jashore Polytechnic Institute'),
           centerTitle: true,
           backgroundColor: Colors.grey[800],
-          actions: [
-            PopupMenuButton(
-              itemBuilder: (BuildContext context) =>[
-                const PopupMenuItem(
-                  child: Text('Admin Login')
-                ),
-              ],
-            ),
-          ],
         ),
         body: Container(
           //color: Colors.grey,
@@ -33,7 +29,6 @@ class Home extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          
           child: Center(
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
@@ -120,7 +115,7 @@ class Home extends StatelessWidget {
                                 context, 
                                 MaterialPageRoute(builder: (context) =>  classroutine()));
                             }, 
-                            child: const Text('Class Routine\n\n      (CMT)'),
+                            child: const Text('Class Routine'),
                           ),
                         ),
                       ),
@@ -139,8 +134,12 @@ class Home extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               primary: Colors.blueGrey.withOpacity(0.6),
                             ),
-                            onPressed: (){}, 
-                            child: const Text('Book List'),
+                            onPressed: (){
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) =>  const jpi_facebook()));
+                            }, 
+                            child: const Text('JPI Facebook\nPage'),
                           ),
                         ),
                       ),
@@ -153,8 +152,12 @@ class Home extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               primary: Colors.blueGrey.withOpacity(0.6),
                             ),
-                            onPressed: (){}, 
-                            child: const Text('Exam'),
+                            onPressed: (){
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) =>  const jpi_control_room()));
+                            }, 
+                            child: const Text('JPI Control Room'),
                           ),
                         ),
                       ),
@@ -174,7 +177,11 @@ class Home extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               primary: Colors.blueGrey.withOpacity(0.6),
                             ),
-                            onPressed: (){}, 
+                            onPressed: (){
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) =>  const contact_jpi()));
+                            }, 
                             child: const Text('Contact JPI'),
                           ),
                         ),
@@ -188,7 +195,11 @@ class Home extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               primary: Colors.blueGrey.withOpacity(0.6),
                             ),
-                            onPressed: (){}, 
+                            onPressed: (){
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) =>  const about()));
+                            }, 
                             child: const Text('About'),
                           ),
                         ),
