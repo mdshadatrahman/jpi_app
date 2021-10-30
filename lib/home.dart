@@ -34,166 +34,171 @@ class Home extends StatelessWidget {
             ),
           ),
           
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
+          child: Center(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
-                          
-                        ), 
-                        child: const Text('News Feed'),
-                        onPressed: (){
-                          Navigator.push(
-                            context, 
-                            MaterialPageRoute(builder: (context) => const institute_notice()));
-                        },
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                              
+                            ), 
+                            child: const Text('Institute Notice'),
+                            onPressed: (){
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) => const institute_notice()));
+                            },
+                          ),
                         ),
-                        onPressed: (){Navigator.push(
-                            context, 
-                            MaterialPageRoute(builder: (context) => const result()));
-                        }, 
-                        child: const Text('Result'),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                            ),
+                            onPressed: (){Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) => const result()));
+                            }, 
+                            child: const Text('Result'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                            ),
+                            onPressed: (){
+            
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) =>  board_notice()));
+                            }, 
+                            child: const Text('Board Notice'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                            ),
+                            onPressed: (){
+                              Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) =>  classroutine()));
+                            }, 
+                            child: const Text('Class Routine\n\n      (CMT)'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                            ),
+                            onPressed: (){}, 
+                            child: const Text('Book List'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                            ),
+                            onPressed: (){}, 
+                            child: const Text('Exam'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+            
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                            ),
+                            onPressed: (){}, 
+                            child: const Text('Contact JPI'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 120,
+                          width: 120,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blueGrey.withOpacity(0.6),
+                            ),
+                            onPressed: (){}, 
+                            child: const Text('About'),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
+            
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
-                        ),
-                        onPressed: (){
-
-                          Navigator.push(
-                            context, 
-                            MaterialPageRoute(builder: (context) =>  board_notice()));
-                        }, 
-                        child: const Text('Board Notice'),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
-                        ),
-                        onPressed: (){
-                          Navigator.push(
-                            context, 
-                            MaterialPageRoute(builder: (context) =>  classroutine()));
-                        }, 
-                        child: const Text('Class Routine\n\n      (CMT)'),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
-                        ),
-                        onPressed: (){}, 
-                        child: const Text('Book List'),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
-                        ),
-                        onPressed: (){}, 
-                        child: const Text('Exam'),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
-                        ),
-                        onPressed: (){}, 
-                        child: const Text('Contact JPI'),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      height: 120,
-                      width: 120,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.blueGrey.withOpacity(0.6),
-                        ),
-                        onPressed: (){}, 
-                        child: const Text('About'),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-
+            ),
           ),
         ),
       ),
